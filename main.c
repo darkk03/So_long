@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     data = malloc(sizeof(t_data));
     if (!data)
         ft_error("Malloc failed", data);
-    data->map = ft_get_map(argv[1]);
+    ft_get_map(&argv[1], data);
     game = malloc(sizeof(t_game));
     if (!game)
         ft_error("Malloc failed", data);
@@ -36,6 +36,6 @@ int main(int argc, char **argv)
 void ft_error(char *str, t_data *data)
 {
     free(data);
-    printf("%s\n", str);
+    ft_printf("%s\n", str);
     exit(1);
 }

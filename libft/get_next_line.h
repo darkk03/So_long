@@ -16,10 +16,11 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
+
 # endif
 
 # include <stdlib.h>
-//# include <unistd.h>
+# include <unistd.h>
 #include <stddef.h>
 
 size_t	ft_strlen(const char *string);
